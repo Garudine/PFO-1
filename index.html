@@ -18,7 +18,7 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER: La portada principal con animaciones suaves para que aparezca bonito al cargar -->
     <header id="mh">
         <div id="header">
             <div id="welcome-container">
@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <!-- NAVBAR -->
+    <!-- NAV: Barra de navegación sticky para que se quede arriba al scrollear -->
     <nav id="nav-container">
         <a href="#mh"><img src="img/logo.png"
                 alt="Logo que muestra una cara de gato vectorizada y negra con una calavera minimalista por rostro."
@@ -46,7 +46,7 @@
 
     <!--SECCIONES-->
     <main>
-        <!-- SOBRE MI -->
+        <!-- SOBRE MI: Layout de dos columnas (texto + foto) que se apila en móvil -->
         <section id="sobre-mi">
             <div class="section">
                 <div class="section-left">
@@ -64,56 +64,54 @@
             </div>
         </section>
 
-        <!-- PROYECTOS -->
-        <section id="tarjetas">
-            <div class="section-par">
-                <span class="section-par-title">¿Qué hice?</span>
+        <!-- PROYECTOS: Usa section-par (fondo oscuro) para que las tarjetas blancas destaquen -->
+        <section id="tarjetas" class="section-par">
+            <span class="section-par-title">¿Qué construí?</span>
 
-                <div class="tarjetas-container">
-                    <div class="tarjeta">
-                        <img src="img/proyecto1.png" alt="Captura de pantalla del proyecto 1: Hometown Project">
-                        <h3>HTML + CSS</h3>
-                        <h2>Hometown Project</h2>
-                        <p>El proyecto en solitario final realizado para el curso de HTML y CSS básico de Scrimba.
-                            Si
-                            bien es una página estática
-                            simple, me sirvió mucho para retomar y calentar mi memoria de programadora antes de
-                            encargarme de un proyecto más
-                            grande.</p>
-                        <a href="https://garudine.github.io/Hometown-Project/" target="_blank">VER
-                            PROYECTO →</a>
-                    </div>
-                    <div class="tarjeta">
-                        <img src="img/proyecto2.png" alt="Captura de pantalla del proyecto 2: Password Generator">
-                        <h3>JavaScript</h3>
-                        <h2>Password Generator</h2>
-                        <p>Uno de los últimos proyectos en solitario para el curso de JavaScript de Scrimba. Consiste en
-                            utilizar lo aprendido para crear un generador aleatorio de contraseñas, pudiendo modificarse
-                            la cantidad
-                            de caracteres al igual que puede traspasarse al portapapeles con solo hacer click
-                            sobre la contraseña deseada.</p>
-                        <a href="https://garudine.github.io/Password-Generator/" target="_blank">VER
-                            PROYECTO →</a>
-                    </div>
-                    <div class="tarjeta">
-                        <img src="img/proyecto3.jpg" alt="Captura de pantalla del proyecto 3: Portfolio Virtual">
-                        <h3>Proyecto Angular</h3>
-                        <h2>Portfolio Virtual</h2>
-                        <p>Como prueba final necesaria para aprobar el curso: Se pide realizar una página personal
-                            completa que sirva como
-                            Portafolio y que pueda utilizarse dinámicamente, obviamente utilizando todo lo aprendido
-                            durante el trayecto. Mi mayor
-                            desafío hasta la fecha, pero del cual me siento feliz de haberlo superado.</p>
-                        <a href="https://soyivanna.web.app/" target="_blank">VER PROYECTO →</a>
-                    </div>
+            <div class="tarjetas-container">
+                <div class="tarjeta">
+                    <img src="img/proyecto1.png" alt="Captura de pantalla del proyecto 1: Hometown Project">
+                    <h3>HTML + CSS</h3>
+                    <h2>Hometown Project</h2>
+                    <p>El proyecto en solitario final realizado para el curso de HTML y CSS básico de Scrimba.
+                        Si
+                        bien es una página estática
+                        simple, me sirvió mucho para retomar y calentar mi memoria de programadora antes de
+                        encargarme de un proyecto más
+                        grande.</p>
+                    <a href="https://garudine.github.io/Hometown-Project/" target="_blank">VER
+                        PROYECTO →</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="img/proyecto2.png" alt="Captura de pantalla del proyecto 2: Password Generator">
+                    <h3>JavaScript</h3>
+                    <h2>Password Generator</h2>
+                    <p>Uno de los últimos proyectos en solitario para el curso de JavaScript de Scrimba. Consiste en
+                        utilizar lo aprendido para crear un generador aleatorio de contraseñas, pudiendo modificarse
+                        la cantidad
+                        de caracteres al igual que puede traspasarse al portapapeles con solo hacer click
+                        sobre la contraseña deseada.</p>
+                    <a href="https://garudine.github.io/Password-Generator/" target="_blank">VER
+                        PROYECTO →</a>
+                </div>
+                <div class="tarjeta">
+                    <img src="img/proyecto3.jpg" alt="Captura de pantalla del proyecto 3: Portfolio Virtual">
+                    <h3>Proyecto Angular</h3>
+                    <h2>Portfolio Virtual</h2>
+                    <p>Como prueba final necesaria para aprobar el curso: Se pide realizar una página personal
+                        completa que sirva como
+                        Portafolio y que pueda utilizarse dinámicamente, obviamente utilizando todo lo aprendido
+                        durante el trayecto. Mi mayor
+                        desafío hasta la fecha, pero del cual me siento feliz de haberlo superado.</p>
+                    <a href="https://soyivanna.web.app/" target="_blank">VER PROYECTO →</a>
                 </div>
             </div>
         </section>
 
-        <!-- HABILIDADES -->
+        <!-- HABILIDADES: Dos columnas con skills en lista y hobbies en grid -->
         <section id="habilidades">
             <div class="section-title">
-                ¿Qué hago?
+                ¿Qué domino?
             </div>
 
             <div class="section">
@@ -197,49 +195,119 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
-        <section id="contacto">
-            <div class="section-par">
+        <!-- CONTACTO: Section-par con dos columnas (form + datos) para layout equilibrado -->
+        <section id="contacto" class="section-par">
+            <span class="section-par-title">¡Hablemos de ideas!</span>
 
+            <div class="section">
+                <!-- Columna 1: Formulario -->
+                <div class="section-left">
+                    <!-- Formulario que envía a Web3Forms: cada campo tiene h3 como label descriptivo para mejor UX -->
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <input type="hidden" name="access_key" value="2b6754de-618c-4724-b269-a0cb80824bc1">
+                        <div class="form-group">
+                            <h3>Tu nombre</h3>
+                            <input id="name" name="name" type="text" placeholder="Ej: Juan García" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h3>Tu correo</h3>
+                            <input id="email" name="email" type="email" placeholder="tu@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h3>Asunto</h3>
+                            <input id="subject" name="subject" type="text" placeholder="¿De qué se trata?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <h3>Tu mensaje</h3>
+                            <textarea id="message" name="message" rows="6" placeholder="Cuéntame qué tienes en mente..."
+                                required></textarea>
+                        </div>
+
+                        <button class="btn" type="submit">Enviar mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Columna 2: Datos y CTA -->
+                <div class="section-right">
+                    <h2>¿Por qué contactarme?</h2>
+                    <p>
+                        Estoy siempre abierta a nuevas oportunidades, consultas sobre proyectos o simplemente para
+                        conectar con personas interesadas en desarrollo web.
+                        Mi objetivo es poder ayudarte de la mejor manera posible en lo que necesites.
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/ivannavrodt/" target="_blank" class="btn-proyecto">Conecta en
+                        LinkedIn →</a>
+
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <h4>Correo electrónico</h4>
+                            <p><a href="mailto:ivannavrodt@hotmail.com">ivannavrodt@hotmail.com</a></p>
+                        </div>
+
+                        <div class="detail-item">
+                            <h4>Horarios de atención</h4>
+                            <p>Lunes a viernes<br>9:00 AM - 6:00 PM (ART)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- PELÍCULAS -->
+        <!-- PELÍCULAS: Grid de 3 columnas en desktop para mostrar posters con hover effects -->
         <section id="peliculas">
             <div class="section-title">
-                Movies
+                Mis inspiraciones
             </div>
 
+            <!-- Grid responsivo: usa CSS Grid con repeat(3, minmax) para que se adapte y no rompa en diferentes anchos -->
             <div id="movie-grid">
                 <div class="movie-item">
                     <div class="movie-wrapper">
                         <img src="img/peliculas/jorobado.jpg" alt="Poster del Jorobado de Notre Dame">
+                        <div class="movie-info">
+                            <h3>El Jorobado de Notre Dame</h3>
+                            <p>Un campanero deforme reivindica su libertad contra un político perverso que lo mantiene
+                                preso en Notre Dame para ayudar
+                                a su amiga, una bailarina gitana.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="movie-item">
                     <div class="movie-wrapper">
-                        <img src="img/peliculas/mononoke.jpg" alt="Poster de La Princesa Mononoke">
+                        <img src="img/peliculas/mononoke.jpg" alt="Poster de la Princesa Mononoke">
+                        <div class="movie-info">
+                            <h3>La Princesa Mononoke</h3>
+                            <p>En un viaje para descubrir la cura de la maldición de Tatarigami, Ashitaka se encuentra
+                                en medio de una guerra entre los
+                                dioses del bosque y Tatara, una colonia minera. En esta búsqueda también conoce a San,
+                                la Princesa Mononoke.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="movie-item">
                     <div class="movie-wrapper">
                         <img src="img/peliculas/perfect.jpg" alt="Poster de Perfect Blue">
+                        <div class="movie-info">
+                            <h3>Perfect Blue</h3>
+                            <p>Una ex cantante de pop que ahora es actriz es acosada por un fan obsesionado y un
+                                fantasma de su pasado.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
         </section>
     </main>
 
-
+    <!-- FOOTER: Pie de página simple con copyright -->
     <footer>
         <div class="footer">
-            <span>© 2026 Ivanna de Rodt. Todos los derechos reservados.</span>
-            <strong>
-                <p>Código realizado para la materia "Desarrollo de Sistemas Web (Front End)" - PFO 1</p>
-            </strong>
+            <p>© 2026 Ivanna de Rodt. Desarrollo de Sistemas Web - PFO 1</p>
         </div>
     </footer>
 </body>

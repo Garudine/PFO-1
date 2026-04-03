@@ -11,6 +11,21 @@ html {
     scroll-behavior: smooth !important;
 }
 
+:root {
+    --color-bg: #F7EBE8;
+    --color-primary: #721817;
+    --color-secondary: #000F08;
+    --color-accent: #FFA987;
+    --color-link: #000F08;
+    --color-link-hover: #721817;
+    --color-light: #fff;
+    --shadow-default: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --radius: 8px;
+    --transition: all 0.3s ease;
+    --transition-smooth: all 0.5s ease;
+}
+
 h1,
 h2,
 h3,
@@ -34,13 +49,14 @@ a {
     align-items: center;
     position: relative;
     background-image: url("/img/header.gif");
-    box-shadow: 0px -5px 0px #FFA987 inset;
+    box-shadow: inset 0px -5px 0px var(--color-accent);
+    animation: fadeInHeader 1s ease-out forwards;
 }
 
 #welcome-container {
     text-align: center;
     font-family: "Spinnaker", sans-serif;
-    color: #000F08;
+    color: var(--color-secondary);
     letter-spacing: 0.4em;
     display: flex;
     flex-direction: column;
@@ -63,15 +79,26 @@ a {
     }
 }
 
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 #headline {
     font-family: "Boldonse", system-ui;
-    background: linear-gradient(to right, #F7EBE8, #FFA987);
+    background: linear-gradient(to right, var(--color-bg), var(--color-accent));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 0.3em;
     font-size: 4rem;
-    border-bottom: #F7EBE8 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, var(--color-bg), var(--color-accent)) 0 0 1 0;
     padding-bottom: 10px;
     width: 0;
     position: relative;
@@ -93,22 +120,24 @@ a {
 #welcome-container p {
     margin: 0;
     font-size: 1rem;
-    color: #F7EBE8;
-    background: linear-gradient(to right, #F7EBE8, #FFA987);
+    color: var(--color-bg);
+    background: linear-gradient(to right, var(--color-bg), var(--color-accent));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: expandLine 1.5s ease forwards;
 }
 
 .scroll-arrow {
     position: relative;
     margin-top: 20px;
     font-size: 2.5rem;
-    color: #F7EBE8;
+    color: var(--color-bg);
     cursor: pointer;
     display: inline-block;
     animation: bounce 2s infinite;
     opacity: 0.7;
+    transition: color var(--transition-smooth);
 }
 
 .scroll-arrow a {
@@ -146,7 +175,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     gap: 50px;
-    background: #F7EBE8;
+    background: var(--color-bg);
     padding: 20px 20px;
     position: -webkit-sticky;
     position: sticky;
@@ -159,20 +188,20 @@ a {
 
 #nav-container a {
     text-decoration: none;
-    color: #000F08;
+    color: var(--color-secondary);
     font-family: "Montserrat", system-ui;
     font-size: 1.2em;
-    transition: color 0.3s ease;
+    transition: color var(--transition-smooth);
 }
 
 #nav-container a:hover {
-    color: #721817;
+    color: var(--color-primary);
 }
 
 #nav-title {
     font-family: "Playfair Display", serif;
     font-size: 2em;
-    color: #000F08;
+    color: var(--color-secondary);
     font-weight: 90;
     margin-right: auto;
     justify-content: left;
@@ -184,8 +213,8 @@ a {
     display: flex;
     flex-direction: row;
     height: auto;
-    background: #F7EBE8;
-    color: #000F08;
+    background: var(--color-bg);
+    color: var(--color-secondary);
     font-size: 1.2em;
     text-align: justify;
     font-family: "Montserrat", system-ui;
@@ -197,9 +226,9 @@ a {
     gap: 10%;
     height: auto;
     min-height: 80vh;
-    background: #721817;
+    background: var(--color-primary);
     background-image: url("/img/doodle-background.png");
-    color: #F7EBE8;
+    color: var(--color-bg);
     font-size: 1.2em;
     text-align: justify;
     font-family: "Montserrat", system-ui;
@@ -231,25 +260,24 @@ h1,
 .section-title {
     font-family: "Playfair Display", serif;
     font-size: 4rem;
-    color: #F7EBE8;
-    text-shadow: 4px 4px 0px #000F08;
+    color: var(--color-bg);
+    text-shadow: 4px 4px 0px var(--color-secondary);
     font-weight: 900;
-    margin-right: auto;
+    margin: 20px 0;
     padding: 0 20px;
     justify-content: left;
     width: 100%;
 }
 
 .section-title {
-    color: #000F08;
-    text-shadow: 2px 2px 0px #721817;
-    margin-bottom: 10px;
+    color: var(--color-secondary);
+    text-shadow: 2px 2px 0px var(--color-primary);
 }
 
 h2 {
     font-family: "Playfair Display", serif;
     font-size: 1.8rem;
-    color: #000F08;
+    color: var(--color-secondary);
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -257,7 +285,7 @@ h2 {
 h3 {
     font-family: "Spinnaker", sans-serif;
     font-size: 0.7rem;
-    color: #721817;
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin-top: 20px;
@@ -274,7 +302,7 @@ p {
 .about-title {
     font-family: "Playfair Display", serif;
     font-size: 4em;
-    color: #000F08;
+    color: var(--color-secondary);
     font-weight: 900;
     margin-right: auto;
     justify-content: left;
@@ -282,8 +310,8 @@ p {
 
 .btn {
     margin-top: 5vh;
-    background: #721817;
-    color: #F7EBE8;
+    background: var(--color-primary);
+    color: var(--color-bg);
     border: none;
     width: 100%;
     padding: 10px 20px;
@@ -291,11 +319,11 @@ p {
     border-radius: 500px;
     font-size: 1.2em;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 .btn:hover {
-    background: #000F08;
+    background: var(--color-secondary);
 }
 
 /* TARJETAS */
@@ -309,18 +337,18 @@ p {
 }
 
 .tarjeta {
-    background: #F7EBE8;
+    background: var(--color-bg);
     border-radius: 20px;
     flex: 1 1 320px;
     max-width: 380px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-default);
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
 }
 
 .tarjeta:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
     transform: translateY(-10px);
 }
 
@@ -332,7 +360,7 @@ p {
 
 .tarjeta p {
     font-size: 0.8em;
-    color: #4a4a4a;
+    color: rgba(0, 0, 0, 0.4);
     margin-bottom: 25px;
 }
 
@@ -340,20 +368,19 @@ p {
     font-family: "Spinnaker", serif;
     margin: auto 25px 25px 25px;
     background: transparent;
-    border: 1px solid #721817;
-    color: #000F08;
+    border: 1px solid var(--color-primary);
+    color: var(--color-secondary);
     font-size: 0.7rem;
     padding: 12px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
     display: block;
     text-align: center;
-    margin: auto 25px 25px 25px;
 }
 
 .tarjeta a:hover {
-    background: #721817;
-    color: #F7EBE8 !important;
+    background: var(--color-primary);
+    color: var(--color-bg);
 }
 
 .tarjeta img {
@@ -368,16 +395,16 @@ p {
 
 /* HABILIDADES */
 
-#habilidades {
-    background-color: #F7EBE8;
+#habilidades,
+#peliculas {
+    background-color: var(--color-bg);
     padding: 20px 10% 60px 10%;
-    color: #000F08;
+    color: var(--color-secondary);
 }
 
 #habilidades .section {
     display: flex;
     gap: 60px;
-    margin-top: 60px;
 }
 
 #habilidades .section-title {
@@ -410,20 +437,20 @@ p {
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
-    color: #000F08;
+    color: var(--color-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background-color: #F7EBE8;
-    border: 2px solid #000F08;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-secondary);
     border-radius: 50px;
-    box-shadow: 4px 4px 0px #000F08;
-    transition: all 0.2s ease;
+    box-shadow: 4px 4px 0px var(--color-secondary);
+    transition: var(--transition-smooth);
     cursor: default;
 }
 
 .lista-skills li:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px #000F08;
+    box-shadow: 6px 6px 0px var(--color-secondary);
 }
 
 /* HOBBIES */
@@ -446,14 +473,14 @@ p {
 .hobby-icon-wrapper {
     width: 100px;
     height: 100px;
-    background-color: #FFF;
-    border: 2px solid #000F08;
+    background-color: var(--color-light);
+    border: 2px solid var(--color-secondary);
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition);
 }
 
 .hobby-icon-wrapper img {
@@ -467,50 +494,184 @@ p {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 0.9rem;
-    color: #000F08;
+    color: var(--color-secondary);
 }
 
 .hobby-item:hover .hobby-icon-wrapper {
     transform: rotate(-5deg) scale(1.1);
-    box-shadow: 5px 5px 0px #000F08;
+    box-shadow: 5px 5px 0px var(--color-secondary);
 }
 
 
-/*CONTACTO*/
+/* CONTACTO */
+
+#contacto .section-left h3,
+#contacto .section-right h2 {
+    color: var(--color-secondary);
+}
+
+.contact-form {
+    display: grid;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group h3 {
+    color: var(--color-primary);
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    background: rgba(247, 235, 232, 0.95);
+    color: var(--color-secondary);
+    transition: var(--transition);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-primary);
+    background: var(--color-bg);
+    box-shadow: 0 0 0 3px rgba(247, 235, 232, 0.2);
+}
+
+#contacto .btn {
+    width: auto;
+    align-self: flex-start;
+    margin-top: 10px;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-weight: 700;
+    padding: 12px 28px;
+}
+
+#contacto .btn:hover {
+    background: var(--color-secondary);
+}
+
+.btn-proyecto {
+    display: inline-block;
+    font-family: "Spinnaker", serif;
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: var(--transition-smooth);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-proyecto:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.contact-details {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-item {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(247, 235, 232, 0.3);
+}
+
+.detail-item h4 {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.detail-item p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.detail-item a {
+    color: var(--color-secondary);
+    transition: color var(--transition-smooth);
+    font-weight: 600;
+}
+
+.detail-item a:hover {
+    color: var(--color-primary);
+}
 
 
 /* MOVIES */
 
-#peliculas {
-    background-color: #F7EBE8;
-    padding: 20px 10% 60px 10%;
-    color: #000F08;
-}
-
 #movie-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    grid-auto-rows: minmax(520px, auto);
     gap: 20px;
-    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
 }
 
 .movie-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 30%;
+    width: 100%;
+    max-width: 100%;
+    align-self: start;
+    min-height: 420px;
+}
+
+.movie-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--color-bg);
+    text-shadow: 2px 2px 0px var(--color-primary);
+    margin-bottom: 10px;
 }
 
 .movie-wrapper {
+    position: relative;
     width: 100%;
-    height: auto;
-    background-color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    min-height: 420px;
+    background-color: var(--color-secondary);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
 }
 
 .movie-wrapper img {
@@ -518,18 +679,43 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-.movie-item:hover .movie-wrapper {
-    transform: rotate(-5deg) scale(1.1);
-    box-shadow: 5px 5px 0px #000F08;
+.movie-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color-light);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.movie-item:hover .movie-wrapper img {
+    filter: blur(8px) brightness(40%);
+    transform: scale(1.1);
+}
+
+.movie-item:hover .movie-info {
+    opacity: 1;
 }
 
 /*FOOTER*/
 
 footer {
-    background: #721817;
-    color: #F7EBE8;
+    background: var(--color-primary);
+    color: var(--color-bg);
     text-align: center;
     padding: 50px;
     font-family: "Montserrat", system-ui;
@@ -550,20 +736,19 @@ footer {
         margin-bottom: 10%;
     }
 
-    .welcome-container {
+    #welcome-container {
         text-align: center;
         padding: 100px 0 0 0;
-        font-family: "Spinnaker",
-            sans-serif;
-        color: #000F08;
+        font-family: "Spinnaker", sans-serif;
+        color: var(--color-secondary);
         font-size: 3em;
         letter-spacing: 0.4em;
     }
 
-    .headline {
+    #headline {
         font-family: "Boldonse", system-ui;
         font-size: 1em;
-        color: #F7EBE8;
+        color: var(--color-bg);
         letter-spacing: 0.6em;
     }
 
@@ -604,7 +789,13 @@ footer {
         margin-bottom: 20px;
     }
 
-    /* HABILIDADES */
+    /* PELÍCULAS */
+    #movie-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .movie-item {
+        width: 100%;
+    }
 
 }
