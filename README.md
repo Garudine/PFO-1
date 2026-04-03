@@ -36,22 +36,22 @@ Secciones obligatorias en "main":<br>
 [✅] Se utilizan selectores basados en clases e identificadores.<br>
 [✅] La tipografía importada desde Google Fonts se aplica correctamente en todos los elementos.<br>
 Layout y Organización:<br>
-[ ] Se ha organizado el layout (especialmente en la sección "tarjetas") utilizando Flexbox o Grid.<br>
+[✅] Se ha organizado el layout (especialmente en la sección "tarjetas") utilizando Flexbox o Grid.<br>
 [ ] Redacta: ¿Qué ventajas encontraste al utilizar Flexbox o Grid en tu proyecto?<br>
 Respuesta: ________________________________________________________<br>
 Estilización de Componentes:<br>
-[ ] Se han personalizado los estilos de tablas, botones, enlaces y formularios.<br>
-[ ] Se han ajustado las dimensiones de imágenes y contenedores utilizando unidades relativas (%,
+[✅] Se han personalizado los estilos de tablas, botones, enlaces y formularios.<br>
+[✅] Se han ajustado las dimensiones de imágenes y contenedores utilizando unidades relativas (%,
 rem, vh).<br>
-[ ] Se ha implementado al menos una animación o transición (por ejemplo, efecto hover en
+[✅] Se ha implementado al menos una animación o transición (por ejemplo, efecto hover en
 tarjetas o botones).<br>
 [ ] Redacta: ¿Qué animación o transición implementaste y por qué consideraste que era
 adecuada para tu proyecto?<br>
 Respuesta: ________________________________________________________<br><br>
 
 • Consideraciones Adicionales:<br>
-[ ] El diseño es responsivo y se visualiza correctamente en distintos dispositivos.<br>
-[ ] Se aplicaron buenas prácticas de accesibilidad (por ejemplo, uso adecuado de atributos alt en
+[✅] El diseño es responsivo y se visualiza correctamente en distintos dispositivos.<br>
+[✅] Se aplicaron buenas prácticas de accesibilidad (por ejemplo, uso adecuado de atributos alt en
 las imágenes).<br>
 [ ] Se añadieron comentarios adicionales donde se describan decisiones de diseño o la lógica de
 implementación.<br>
