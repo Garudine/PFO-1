@@ -1,6 +1,6 @@
 # Introducción
 
-Este proyecto está realizado para la Práctiva Formativa Obligatoria 1 de la carrera de Desarrollador de Software, para la materia de Desarrollador Front End. En esta práctica, me encargué de hacer una página de Portfolio básica, que cumple con los requerimientos pedidos para su aprobación. Usando solo HTML + CSS, me encargué de codear un sitio que fuera estético, usable para el usuario promedio y además responsive para los viewport mobiles.
+Este proyecto está realizado para la Práctiva Formativa Obligatoria 1 de la carrera de Desarrollador de Software, para la materia de Desarrollador Front End. En esta práctica, me encargué de hacer una página de Portfolio básica, que cumple con los requerimientos pedidos para su aprobación. Usando solo HTML + CSS, me encargué de codear un sitio que fuera estético, usable para el usuario promedio y además responsive para los viewport móviles.
 
 <a href="https://pfo-1-ivanna-de-rodt.vercel.app/">LIVE SITE</a>
 
